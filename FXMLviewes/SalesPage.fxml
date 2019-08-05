@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane fx:id="" alignment="CENTER" prefHeight="600.0" prefWidth="930.0" style="-fx-background-color: #e5e5e5;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.com.einsporn.MainControllers.SalesPageController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="10.0" prefWidth="30.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="72.0" minWidth="0.0" prefWidth="0.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="83.0" minWidth="10.0" prefWidth="61.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="10.0" prefWidth="106.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="110.0" minWidth="10.0" prefWidth="96.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="118.0" minWidth="10.0" prefWidth="45.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="103.0" minWidth="10.0" prefWidth="96.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="280.0" minHeight="10.0" prefHeight="280.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="132.0" minHeight="0.0" prefHeight="2.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="43.0" minHeight="7.0" prefHeight="9.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="55.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="51.0" minHeight="9.0" prefHeight="41.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="38.0" minHeight="5.0" prefHeight="24.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="26.0" minHeight="8.0" prefHeight="11.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <TableView fx:id="salesTable" editable="true" maxWidth="870.0" minWidth="500.0" prefHeight="169.0" prefWidth="650.0" GridPane.columnIndex="2" GridPane.columnSpan="2147483647" GridPane.rowIndex="1" GridPane.rowSpan="6">
+            <columns>
+
+                <TableColumn editable="false" prefWidth="57.0" resizable="false" text="Sale No">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="saleNumber" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" minWidth="0.0" prefWidth="78.0" resizable="false" text="Date">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="date" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" minWidth="0.0" prefWidth="71.0" resizable="false" text="Time">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="time" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" maxWidth="219.0" prefWidth="117.0" resizable="false" text="Customer">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="customer" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn editable="false" maxWidth="309.0" minWidth="50.0" prefWidth="142.0" resizable="false" text="Product">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="product" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                      <TableColumn editable="false" maxWidth="210.0" minWidth="32.0" prefWidth="45.0" resizable="false" text="Code">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="code" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn editable="false" minWidth="0.0" prefWidth="49.0" resizable="false" text="Size">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="size" />
+                    </cellValueFactory>
+                </TableColumn>
+            <TableColumn editable="false" prefWidth="40.0" resizable="false" text="Units">
+               <cellValueFactory>
+                  <PropertyValueFactory property="units" />
+               </cellValueFactory>
+            </TableColumn>
+
+                <TableColumn editable="false" minWidth="0.0" prefWidth="77.0" resizable="false" text="Category">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="category" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn editable="false" maxWidth="191.0" minWidth="0.0" prefWidth="54.0" resizable="false" text="Quantity">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="quantity" />
+                    </cellValueFactory>
+                </TableColumn>
+
+                <TableColumn editable="false" maxWidth="256.0" minWidth="0.0" prefWidth="71.0" resizable="false" text="Price/Unit">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="itemPrice" />
+                    </cellValueFactory>
+                </TableColumn>
+            <TableColumn editable="false" maxWidth="321.0" minWidth="0.0" prefWidth="68.0" resizable="false" text="Price">
+               <cellValueFactory>
+                  <PropertyValueFactory property="salePrice" />
+               </cellValueFactory>
+            </TableColumn>
+
+
+            </columns>
+        </TableView>
+        <Label fx:id="selectProductLabel" prefHeight="17.0" prefWidth="117.0" text="Sales" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowSpan="2">
+            <padding>
+                <Insets top="5.0" />
+            </padding>
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+            <GridPane.margin>
+                <Insets bottom="40.0" />
+            </GridPane.margin>
+        </Label>
+      <RadioButton fx:id="saleNumberRadioBtn" mnemonicParsing="false" text="Sale No" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+      <RadioButton fx:id="dateRadioBtn" mnemonicParsing="false" text="Date" GridPane.columnIndex="3" GridPane.rowIndex="8">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin></RadioButton>
+      <Label fx:id="selectProductLabel" prefHeight="17.0" prefWidth="117.0" text="Filter by" GridPane.columnIndex="2" GridPane.rowIndex="7">
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="saleNoFromTextField" maxWidth="105.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets left="35.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextField fx:id="selectFilterTextField" maxWidth="238.0" prefHeight="25.0" prefWidth="229.0" GridPane.columnIndex="4" GridPane.columnSpan="4" GridPane.rowIndex="9">
+         <GridPane.margin>
+            <Insets left="35.0" />
+         </GridPane.margin></TextField>
+      <DatePicker fx:id="dateFromDatePicker" maxWidth="105.0" prefHeight="25.0" prefWidth="93.0" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="8">
+         <GridPane.margin>
+            <Insets left="35.0" />
+         </GridPane.margin>
+      </DatePicker>
+      <DatePicker fx:id="dateToDatePicker" maxWidth="105.0" GridPane.columnIndex="5" GridPane.columnSpan="3" GridPane.rowIndex="8">
+         <GridPane.margin>
+            <Insets left="73.0" />
+         </GridPane.margin>
+      </DatePicker>
+      <Label text="From" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="8">
+         <GridPane.margin>
+            <Insets left="90.0" />
+         </GridPane.margin></Label>
+      <Label text="To" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="8">
+         <GridPane.margin>
+            <Insets left="52.0" />
+         </GridPane.margin>
+      </Label>
+      <TextField fx:id="saleNoToTextField" maxWidth="105.0" GridPane.columnIndex="5" GridPane.columnSpan="3" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets left="73.0" />
+         </GridPane.margin>
+      </TextField>
+      <Label text="From" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets left="90.0" />
+         </GridPane.margin></Label>
+      <Label text="To" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets left="52.0" />
+         </GridPane.margin>
+      </Label>
+      <Button mnemonicParsing="false" onAction="#filterBtnHandler" prefHeight="25.0" prefWidth="110.0" text="Filter" GridPane.columnIndex="7" GridPane.columnSpan="2" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets left="50.0" />
+         </GridPane.margin>
+      </Button>
+      <Label text="Total Price" GridPane.columnIndex="9" GridPane.columnSpan="2" GridPane.rowIndex="7">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="60.0" />
+         </GridPane.margin>
+      </Label>
+      <TextField fx:id="totalPriceTextField" maxWidth="100.0" prefHeight="25.0" prefWidth="96.0" GridPane.columnIndex="9" GridPane.columnSpan="3" GridPane.rowIndex="7">
+         <GridPane.margin>
+            <Insets left="145.0" />
+         </GridPane.margin>
+      </TextField>
+      <Button mnemonicParsing="false" onAction="#clearFilterBtnHandler" prefHeight="25.0" prefWidth="115.0" text="Clear" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="10">
+         <GridPane.margin>
+            <Insets left="35.0" />
+         </GridPane.margin></Button>
+      <Label text="Item(s)" GridPane.columnIndex="10" GridPane.columnSpan="2" GridPane.rowIndex="8">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="50.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="salesNumberLabel" prefHeight="17.0" prefWidth="20.0" text="20" GridPane.columnIndex="11" GridPane.rowIndex="8">
+         <GridPane.margin>
+            <Insets bottom="20.0" />
+         </GridPane.margin>
+      </Label>
+      <ComboBox fx:id="selectFilterComboBox" prefHeight="25.0" prefWidth="131.0" promptText="Select" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="9" />
+      <Label fx:id="salesLabel" prefHeight="43.0" prefWidth="182.0" text="Sales" GridPane.columnIndex="8" GridPane.columnSpan="2" GridPane.rowIndex="9">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+      </Label>
+    </children>
+</GridPane>

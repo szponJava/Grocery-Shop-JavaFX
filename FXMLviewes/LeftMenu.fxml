@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.com.einsporn.MainControllers.LeftMenuController">
+   <left>
+      <VBox maxWidth="70.0" minHeight="-Infinity" prefHeight="300.0" prefWidth="70.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="shopLeftMenuBtn" blendMode="DARKEN" lineSpacing="3.0" mnemonicParsing="false" onAction="#shopPageBtnHandle" prefHeight="70.0" prefWidth="70.0" style="-fx-background-color: #aad1ff; -fx-border-color: green;" text="SHOP" textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="8.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="customerLeftMenuBtn" lineSpacing="3.0" mnemonicParsing="false" onAction="#CustomerPageBtnHandle" prefHeight="70.0" prefWidth="70.0" text="CUSTOMERS" textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="8.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="productLeftMenuBtn" lineSpacing="3.0" mnemonicParsing="false" onAction="#productPageBtnHandler" prefHeight="70.0" prefWidth="70.0" text="PRODUCTS" textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="8.0" />
+               </font>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="supplierLeftMenuBtn" lineSpacing="3.0" mnemonicParsing="false" onAction="#supplierPageBtnHandler" prefHeight="70.0" prefWidth="70.0" text="SUPPLIERS" textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="8.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="salesLeftMenuBtn" lineSpacing="3.0" mnemonicParsing="false" onAction="#salesPageBtnHandler" prefHeight="70.0" prefWidth="70.0" text="SALES" textAlignment="CENTER" textOverrun="CLIP">
+               <font>
+                  <Font name="System Bold" size="8.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
+   </left>
+</BorderPane>

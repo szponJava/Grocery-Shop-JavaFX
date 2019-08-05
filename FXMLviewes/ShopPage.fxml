@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" prefHeight="600.0" prefWidth="930.0" style="-fx-background-color: #e5e5e5;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="au.com.einsporn.MainControllers.ShopPageController">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="10.0" prefWidth="116.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="72.0" minWidth="0.0" prefWidth="0.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="78.0" minHeight="10.0" prefHeight="35.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="70.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="143.0" minHeight="10.0" prefHeight="139.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="141.0" minHeight="10.0" prefHeight="139.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="43.0" minHeight="9.0" prefHeight="24.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="25.0" minHeight="6.0" prefHeight="17.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TextField fx:id="productSearchTextField" prefHeight="50.0" promptText="Product Search" GridPane.columnIndex="2" GridPane.columnSpan="6" GridPane.rowIndex="1">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Label fx:id="productSearchLabel" prefHeight="20.0" text="Product Search" GridPane.columnIndex="2" GridPane.columnSpan="2">
+         <padding>
+            <Insets top="12.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="10.0" />
+         </GridPane.margin>
+      </Label>
+      <TableView fx:id="selectProductTable" editable="true" prefHeight="169.0" prefWidth="460.0" GridPane.columnIndex="2" GridPane.columnSpan="7" GridPane.rowIndex="3" GridPane.rowSpan="2">
+
+        <columns>
+            <TableColumn editable="false" prefWidth="199.0" resizable="false" text="Description">
+                <cellValueFactory>
+                    <PropertyValueFactory property="description" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn editable="false" minWidth="0.0" prefWidth="55.0" resizable="false" text="Code">
+                <cellValueFactory>
+                    <PropertyValueFactory property="code" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn editable="false" maxWidth="106.0" minWidth="0.0" prefWidth="41.0" resizable="false" text="Size">
+                <cellValueFactory>
+                    <PropertyValueFactory property="size" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn editable="false" maxWidth="125.0" prefWidth="34.0" resizable="false" text="Unit">
+                <cellValueFactory>
+                    <PropertyValueFactory property="unit" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn editable="false" maxWidth="170.0" prefWidth="73.0" resizable="false" text="Category">
+                <cellValueFactory>
+                    <PropertyValueFactory property="category" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn editable="false" maxWidth="175.0" prefWidth="78.0" resizable="false" text="Stock Level">
+                <cellValueFactory>
+                    <PropertyValueFactory property="stockLevel" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn editable="false" maxWidth="157.0" prefWidth="68.0" resizable="false" text="Price">
+                <cellValueFactory>
+                    <PropertyValueFactory property="price" />
+                </cellValueFactory>
+            </TableColumn>
+
+        </columns>
+         <GridPane.margin>
+            <Insets right="30.0" />
+         </GridPane.margin>
+      </TableView>
+      <Label fx:id="quantityLabel" alignment="CENTER" prefHeight="20.0" text="Quntity" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.columnSpan="2" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="100.0" left="70.0" />
+         </GridPane.margin>
+      </Label>
+      <TextField fx:id="quantityTextField" maxHeight="30.0" maxWidth="120.0" prefHeight="30.0" prefWidth="60.0" promptText="Quantity" GridPane.columnIndex="9" GridPane.columnSpan="2" GridPane.rowIndex="3">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="100.0" left="50.0" />
+         </GridPane.margin>
+      </TextField>
+      <Label fx:id="priceLabel" alignment="CENTER" prefHeight="20.0" text="Price" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.columnSpan="2" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="70.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="selectProductLabel" prefHeight="17.0" prefWidth="117.0" text="Select Product" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2">
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <GridPane.margin>
+            <Insets top="5.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="priceDisplayLabel" alignment="CENTER" maxHeight="30.0" maxWidth="120.0" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: white;" textAlignment="CENTER" GridPane.columnIndex="9" GridPane.columnSpan="2" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="50.0" />
+         </GridPane.margin>
+      </Label>
+      <Button fx:id="addToBasketBtn" mnemonicParsing="false" onAction="#AddToCustomerBasketBtnHandler" prefHeight="36.0" prefWidth="265.0" text="Add to Basket" GridPane.columnIndex="8" GridPane.columnSpan="3" GridPane.rowIndex="4">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="70.0" />
+         </GridPane.margin>
+      </Button>
+      <TableView fx:id="customerBasketTable" editable="true" snapToPixel="false" GridPane.columnIndex="2" GridPane.columnSpan="9" GridPane.rowIndex="6" GridPane.rowSpan="4">
+          <placeholder>
+              <Label text="Customer Basket is Empty " />
+          </placeholder>
+
+        <columns>
+            <TableColumn editable="false" prefWidth="367.0" resizable="false" text="Description">
+                <cellValueFactory>
+                    <PropertyValueFactory property="description" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn editable="false" minWidth="0.0" prefWidth="62.0" resizable="false" text="Code">
+                <cellValueFactory>
+                    <PropertyValueFactory property="code" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn editable="false" maxWidth="209.0" minWidth="0.0" prefWidth="44.0" resizable="false" text="Size">
+                <cellValueFactory>
+                    <PropertyValueFactory property="size" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn editable="false" maxWidth="183.0" minWidth="0.0" prefWidth="41.0" resizable="false" text="Unit">
+                <cellValueFactory>
+                    <PropertyValueFactory property="unit" />
+                </cellValueFactory>
+            </TableColumn>
+
+            <TableColumn editable="false" maxWidth="216.0" minWidth="0.0" prefWidth="82.0" resizable="false" text="Category">
+                <cellValueFactory>
+                    <PropertyValueFactory property="category" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn editable="false" prefWidth="62.0" resizable="false" text="Quantity">
+                <cellValueFactory>
+                    <PropertyValueFactory property="quantity" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn editable="false" prefWidth="88.0" resizable="false" text="Price">
+                <cellValueFactory>
+                    <PropertyValueFactory property="price" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn editable="false" prefWidth="367.0" resizable="false" text="ID" visible="false">
+               <cellValueFactory>
+                  <PropertyValueFactory property="description" />
+               </cellValueFactory>
+            </TableColumn>
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button fx:id="addCustomerBtn" mnemonicParsing="false" onAction="#AddCustomerBtnHandler" prefHeight="42.0" prefWidth="76.0" text="Add Customer" textAlignment="CENTER" wrapText="true" GridPane.columnSpan="2" GridPane.rowIndex="3">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="40.0" left="10.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="removeCustomerBtn" mnemonicParsing="false" onAction="#RemoveCustomerBtnHandler" prefHeight="42.0" prefWidth="76.0" text="Remove Customer" textAlignment="CENTER" wrapText="true" GridPane.columnSpan="2" GridPane.rowIndex="3" GridPane.rowSpan="2">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="10.0" top="55.0" />
+         </GridPane.margin>
+      </Button>
+      <Label fx:id="CustomerLabel" prefHeight="24.0" prefWidth="150.0" text="Customer Basket" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="5">
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalLabel" alignment="CENTER" prefHeight="20.0" text="TOTAL = " textAlignment="CENTER" GridPane.columnIndex="2" GridPane.rowIndex="11">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="totalPriceDisplayLabel" alignment="CENTER" maxHeight="30.0" maxWidth="173.0" prefHeight="30.0" prefWidth="173.0" style="-fx-background-color: white;" textAlignment="CENTER" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="11">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="removeSelectedItemBtn" mnemonicParsing="false" onAction="#RemoveSelectedItemBtnHandler" prefHeight="58.0" prefWidth="76.0" text="Remove Selected Item" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="6" GridPane.rowSpan="6">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="37.0" left="10.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="saveBtn" mnemonicParsing="false" onAction="#SaveBtnHandler" prefHeight="36.0" prefWidth="265.0" text="Save" GridPane.columnIndex="8" GridPane.columnSpan="3" GridPane.rowIndex="11">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="70.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="productSearchBtnHandler" maxWidth="265.0" mnemonicParsing="false" onAction="#productSearchBtnHandler" prefHeight="36.0" prefWidth="265.0" text="Search" GridPane.columnIndex="8" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="5.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="editSelectedItemBtn" mnemonicParsing="false" onAction="#EditSelectedItemBtnHandler" prefHeight="42.0" prefWidth="76.0" text="Edit Selected Item" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="6" GridPane.rowSpan="3">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <GridPane.margin>
+            <Insets bottom="88.0" left="10.0" />
+         </GridPane.margin>
+      </Button>
+      <Separator maxWidth="76.0" minWidth="50.0" prefHeight="4.0" prefWidth="76.0" GridPane.rowIndex="6" GridPane.rowSpan="2">
+         <GridPane.margin>
+            <Insets left="10.0" top="147.0" />
+         </GridPane.margin>
+      </Separator>
+      <Button alignment="CENTER_RIGHT" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onAction="#emptyCustomerBasketBtnHandler" prefHeight="42.0" prefWidth="76.0" text="Empty Basket" textAlignment="CENTER" wrapText="true" GridPane.rowIndex="6" GridPane.rowSpan="4">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="10.0" top="160.0" />
+         </GridPane.margin>
+      </Button>
+      <Label fx:id="numberOfItemsInCustomerBasketLabel" prefHeight="20.0" prefWidth="30.0" text="36" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+      <Label prefHeight="20.0" prefWidth="49.0" text="Item(s)" GridPane.columnIndex="2" GridPane.rowIndex="10">
+         <GridPane.margin>
+            <Insets left="22.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="trolleyLabel" prefHeight="36.0" prefWidth="113.0" style="-fx-background-image: sample.Resources/shoppingTroley.png;" text="Shopping" GridPane.columnIndex="9" GridPane.columnSpan="3" GridPane.rowIndex="1">
+         <font>
+            <Font name="System Bold" size="10.0" />
+         </font>
+         <GridPane.margin>
+            <Insets left="70.0" />
+         </GridPane.margin>
+      </Label>
+      <Separator maxWidth="76.0" minWidth="50.0" prefHeight="4.0" prefWidth="76.0" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets left="10.0" top="25.0" />
+         </GridPane.margin>
+      </Separator>
+      <Label text="Customer Name:" GridPane.columnIndex="6" GridPane.columnSpan="2" GridPane.rowIndex="11">
+         <GridPane.margin>
+            <Insets bottom="20.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="customerNameLabel" text="Not Selected" textFill="#ab1d1d" GridPane.columnIndex="6" GridPane.columnSpan="3" GridPane.rowIndex="11">
+         <GridPane.margin>
+            <Insets bottom="20.0" left="100.0" />
+         </GridPane.margin>
+      </Label>
+      <Label text="Customer No:" GridPane.columnIndex="6" GridPane.rowIndex="11">
+         <GridPane.margin>
+            <Insets bottom="20.0" top="40.0" />
+         </GridPane.margin>
+      </Label>
+      <Label fx:id="customerNumberLabel" text="N/A" textFill="#ab1d1d" GridPane.columnIndex="7" GridPane.rowIndex="11">
+         <GridPane.margin>
+            <Insets left="18.0" top="40.0" />
+         </GridPane.margin>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </Label>
+      <Separator layoutX="20.0" layoutY="463.0" maxWidth="76.0" minWidth="50.0" prefHeight="4.0" prefWidth="76.0" GridPane.rowIndex="6">
+         <GridPane.margin>
+            <Insets left="10.0" top="16.0" />
+         </GridPane.margin>
+      </Separator>
+      <RadioButton fx:id="descriptionSearchRadioBtn" mnemonicParsing="false" text="Description" GridPane.columnIndex="6" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="10.0" />
+         </GridPane.margin></RadioButton>
+      <RadioButton fx:id="categorySearchRadioBtn" mnemonicParsing="false" text="Category" GridPane.columnIndex="7" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" />
+         </GridPane.margin></RadioButton>
+   </children>
+</GridPane>
