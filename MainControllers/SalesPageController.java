@@ -360,7 +360,7 @@ private void totalSalePriceAndNumberCalculation(){
 
 }
 
-
+    // class sorting Sale ID column numerically
     class SortingBySaleID implements Comparator<Sales> {
 
         @Override

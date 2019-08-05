@@ -46,7 +46,7 @@ public class ProductPageController {
     @FXML
     private Button editProductBtn;
     @FXML
-    TableView<Product> productsTable = new TableView();
+    private TableView<Product> productsTable = new TableView();
     @FXML
     private Label productsLabel;
 
@@ -762,7 +762,7 @@ public class ProductPageController {
     }
 
 
-    // class sorting items numerically
+    // class sorting Product ID column numerically
     class SortingByProductID implements Comparator<Product> {
 
         @Override

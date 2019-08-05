@@ -56,9 +56,9 @@ public class ShopPageController {
     private RadioButton descriptionSearchRadioBtn,categorySearchRadioBtn;
 
     @FXML
-    TableView<Product> selectProductTable = new TableView<>();
+    private TableView<Product> selectProductTable = new TableView<>();
     @FXML
-    TableView<CustomerBasketTable> customerBasketTable = new TableView<>();
+    private TableView<CustomerBasketTable> customerBasketTable = new TableView<>();
 
 
     private ShopPageData shopPageData;
@@ -811,7 +811,7 @@ public class ShopPageController {
     }
 
 
-   /* class to sort strings  alphabetically */
+   /* class to sort Description column alphabetically */
     class SortingAlphabetically implements Comparator<Product>{
 
         @Override
