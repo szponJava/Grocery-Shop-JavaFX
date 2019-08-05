@@ -1,4 +1,4 @@
- #Simple Grocery Shop Management JavaFx Application connected with database created in Microsoft SQL Server. Program can save Products, Customers, Suppliers and Sales data in *.txt file.
+ #Simple Grocery Shop Management JavaFx Application connected to database created in Microsoft SQL Server. Program can save Products, Customers, Suppliers and Sales data in *.txt file.
 <br><br>
 <b>"Shop Page"<b>
   <br>
